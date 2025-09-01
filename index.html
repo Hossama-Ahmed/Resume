@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hossam Ahmed | Strategic Leader in Global Connectivity</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Professional Calm -->
-    <!-- Application Structure Plan: The SPA is designed as a narrative journey through Hossam's career. It starts with a high-level summary and key impact metrics (dashboard) for quick assessment by busy recruiters. An interactive timeline then provides a chronological overview, allowing users to click and deep-dive into specific roles. The extensive Google experience is organized into tabs for clarity. Key achievements are visualized with charts to make data more digestible and memorable. This structure guides the user from a broad overview to specific details in an engaging, non-linear way, which is more effective than a static document for showcasing impact and expertise. -->
+    <!-- Application Structure Plan: The SPA is designed as a narrative journey through Hossam's career. It starts with a high-level summary and key impact metrics (dashboard) for quick assessment by busy recruiters. An interactive timeline then provides a chronological overview, allowing users to click and deep-dive into specific roles. The extensive Google experience is organized into tabs for clarity. Key achievements are presented with text and bolding to make data digestible and memorable. This structure guides the user from a broad overview to specific details in an engaging, non-linear way, which is more effective than a static document for showcasing impact and expertise. -->
     <!-- Visualization & Content Choices: 
     - Report Info: Key career achievements (cost savings, efficiency gains). Goal: Inform/Impress. Viz/Method: Large number "Stat Cards". Interaction: Subtle hover effects. Justification: Grabs immediate attention and highlights quantifiable success. Method: HTML/Tailwind.
     - Report Info: Career history. Goal: Change/Organize. Viz/Method: Interactive vertical timeline. Interaction: On click, reveals detailed role descriptions below. Justification: Provides a clear, engaging overview of career progression. Method: HTML/CSS/JS.
     - Report Info: Detailed roles at Google. Goal: Organize. Viz/Method: Tabbed content area. Interaction: Click tabs to switch between role details. Justification: Manages a large amount of related information cleanly without cluttering the page. Method: HTML/CSS/JS.
-    - Report Info: Handover process time reduction (43 to <20 days). Goal: Compare. Viz/Method: Bar Chart. Interaction: Hover tooltips. Justification: Visually demonstrates a dramatic process improvement. Library: Chart.js.
-    - Report Info: Forecast accuracy improvement (56% to 87%). Goal: Change. Viz/Method: Bar Chart. Interaction: Hover tooltips. Justification: Clearly shows a significant positive trend in performance. Library: Chart.js.
+    - Report Info: Handover process time reduction and forecast accuracy. Goal: Inform/Compare. Viz/Method: Text blocks with bolded numbers. Interaction: None. Justification: Clearly communicates key metrics without a visual chart, keeping the page minimal while still highlighting the achievements. Method: HTML/Tailwind.
     - Report Info: Skills & Certifications. Goal: Inform. Viz/Method: Grid layout with icons. Interaction: None. Justification: Clean, scannable presentation of qualifications. Method: HTML/Tailwind.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
@@ -64,16 +62,6 @@
             background-color: #e0f2f1;
             color: #005f73;
         }
-        .chart-container {
-            position: relative; 
-            width: 100%; 
-            max-width: 600px; 
-            margin-left: auto; 
-            margin-right: auto; 
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) { .chart-container { height: 350px; } }
     </style>
 </head>
 <body class="bg-primary">
@@ -109,7 +97,7 @@
         <section id="impact" class="mb-12">
             <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Career Highlights & Impact</h3>
              <div class="text-center mb-8 max-w-3xl mx-auto">
-                <p class="text-gray-600">This section provides a snapshot of key quantifiable achievements throughout my career. These metrics represent significant improvements in efficiency, cost savings, and operational excellence. The charts below offer a visual deep-dive into two specific examples of process transformation and performance enhancement.</p>
+                <p class="text-gray-600">This section provides a snapshot of key quantifiable achievements throughout my career. These metrics represent significant improvements in efficiency, cost savings, and operational excellence.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                 <div class="bg-secondary p-6 rounded-lg shadow-md">
@@ -129,18 +117,20 @@
                     <p class="text-gray-600 mt-2">Increase in Forecast Accuracy</p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                 <div class="bg-secondary p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold text-center mb-4 text-gray-700">Handover Process Turnaround</h4>
-                    <div class="chart-container">
-                        <canvas id="turnaroundTimeChart"></canvas>
-                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-accent">Process Efficiency & Automation</h4>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>Transformed the handover process between the Design and Deploy teams, **reducing the average turnaround time by over 50%** (from 43 to less than 20 days) by introducing a structured, programmatic workflow.</li>
+                        <li>Automated peering turn-ups and developed a forecasting model that **improved 100G forecast accuracy from 56% to 87%**, resulting in significant cost savings on unneeded hardware builds.</li>
+                    </ul>
                 </div>
-                <div class="bg-secondary p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold text-center mb-4 text-gray-700">100G Forecast Accuracy</h4>
-                     <div class="chart-container">
-                        <canvas id="forecastAccuracyChart"></canvas>
-                    </div>
+                 <div class="bg-secondary p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-4 text-accent">Cost Optimization & Strategic Growth</h4>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>Spearheaded the initiative to deprecate manual material forecasting, implementing an automated system that resulted in a **hundreds of millions of dollars reduction** in material forecast and the cancellation of open POs valued in the double-digit millions.</li>
+                        <li>Architected and drove a strategic solution for direct connectivity with critical enterprise customers, which improved cost and reliability and enabled the timely delivery of **multi-billion dollar AI cloud deals**.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -354,47 +344,6 @@ Tools & Systems: Digital Control Systems, Process Improvement, Capacity Planning
                 eduHtml += `<div><p class="font-semibold text-gray-800">${edu.item}</p><p class="text-gray-600">${edu.institution}</p></div>`;
             });
             eduContainer.innerHTML = eduHtml;
-
-
-            new Chart(document.getElementById('turnaroundTimeChart'), {
-                type: 'bar',
-                data: {
-                    labels: ['Before Transformation', 'After Transformation'],
-                    datasets: [{
-                        label: 'Turnaround Time (Days)',
-                        data: [43, 19],
-                        backgroundColor: ['rgba(255, 159, 64, 0.6)', 'rgba(75, 192, 192, 0.6)'],
-                        borderColor: ['rgba(255, 159, 64, 1)', 'rgba(75, 192, 192, 1)'],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: { y: { beginAtZero: true, max: 50, title: { display: true, text: 'Days' } } },
-                    plugins: { legend: { display: false } }
-                }
-            });
-
-            new Chart(document.getElementById('forecastAccuracyChart'), {
-                type: 'bar',
-                data: {
-                    labels: ['Previous Accuracy', 'Improved Accuracy'],
-                    datasets: [{
-                        label: 'Forecast Accuracy (%)',
-                        data: [56, 87],
-                        backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)'],
-                        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: 'Accuracy %' } } },
-                    plugins: { legend: { display: false } }
-                }
-            });
             
             const navLinks = document.querySelectorAll('nav a');
             const sections = document.querySelectorAll('main section');
